@@ -103,7 +103,7 @@ let html = `
             iframes[currentIframe].classList.remove('active');
             currentIframe = (currentIframe + 1) % iframes.length;
             iframes[currentIframe].classList.add('active');
-        }, 3000);
+        }, 10000);
 
         Array.from(document.getElementsByClassName('prev')).forEach((button, index) => {
             button.addEventListener('click', function() {
