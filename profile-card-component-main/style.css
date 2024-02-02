@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, body, ul, ol, dl {
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 100svw;
+  min-height: 100svh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 15px;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 25rem 25rem, 25rem 25rem;
+  background-position: -10rem -10rem, bottom -10rem right -10rem;
+}
+
+span, p {
+  color: hsla(227, 10%, 46%, 0.75);
+}
+
+main {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  margin: 2rem;
+}
+main .container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+main .container .card .card__image {
+  box-sizing: content-box;
+  position: relative;
+  top: -4rem;
+  margin-bottom: -3rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  overflow: hidden;
+  background-image: url(images/image-victor.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30%;
+  padding-top: 30%;
+}
+main .container .card .card__content--top h2 span {
+  font-weight: 400;
+}
+main .container .card hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.5);
+  margin: 1.5rem;
+}
+main .container .card .card__content--bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 400px) {
+  html, body {
+    background-size: 75rem 75rem, 75rem 75rem;
+    background-position: -25rem -50rem, bottom -50rem right -25rem;
+  }
+}/*# sourceMappingURL=style.css.map */

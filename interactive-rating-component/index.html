@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <main>
+    <div class="feedback">
+      
+      <header class="star">
+        <img src="images/icon-star.svg" alt="">
+      </header>
+
+      <section>
+        <h1> How did we do? </h1>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+      </section>
+    
+      <form id="rating" action="thank-you.html" class="rating">
+        <input type="radio" name="rating" id="1" value="1">
+        <label for="1">1</label>
+        <input type="radio" name="rating" id="2" value="2">
+        <label for="2">2</label>
+        <input type="radio" name="rating" id="3" value="3">
+        <label for="3">3</label>
+        <input type="radio" name="rating" id="4" value="4">
+        <label for="4">4</label>
+        <input type="radio" name="rating" id="5" value="5">
+        <label for="5">5</label>
+        <button form="rating"> SUBMIT </button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

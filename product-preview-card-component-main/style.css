@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body, ul, ol, dl {
+	margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100svw;
+  height: 100svh;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: hsl(30, 38%, 92%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 2rem;
+  width: 90%;
+  min-width: 22rem;
+}
+
+.card__image {
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 0;
+  padding-top: 70%;
+}
+
+.card__content {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__content p {
+  color: hsl(228, 12%, 48%)
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+}
+
+h5 {
+  letter-spacing: 5px;
+  font-weight: 300;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: top;
+  margin: 1rem 0;
+}
+
+span.sp {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+span.mrp {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  padding-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  height: 3rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  main {
+    height: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%;
+    height: 100%; */
+  }
+  .card {
+    aspect-ratio: 4/3;
+    width: 40rem;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      "image content";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__image {
+    all: unset;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: contain;
+    grid-area: image;
+    height: 100%;
+  }
+
+  .card__content {
+    grid-area: content;
+    border-radius: 0;
+  }
+
+}

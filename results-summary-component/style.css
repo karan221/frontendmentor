@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500 700 800;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Hanken Grotesk', Geneva, sans-serif; font-size:18px;
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 800px) {
+  .result {
+    flex-direction: column;
+  }
+}
+
+.grey { color: hsl(241, 100%, 89%) }
+
+.result {
+  display: flex;
+  margin: 0 auto;
+  min-width: 380px;
+  max-width: 800px;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.scorecard {
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  border-radius: 2rem;
+  padding: 2rem;
+  margin: 0;
+  text-align: center;
+  width: 380px;
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+}
+
+.great {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.statistic {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.summary {
+  color: black;
+  margin: 2rem;
+  width: 350px;
+}
+
+.summary > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.summary > ul > li {
+  margin: 1rem 0;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li#reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+li#memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+li#verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+li#visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary > ul img {
+  margin-right: 10px;
+}
+
+.summary > ul > li > span {
+  display: flex;
+  align-items: center;
+}
+
+.summary button {
+  font-size: 1rem;
+  text-align: center;
+  background: hsl(224, 30%, 27%);
+  color: white;
+  border-radius: 3rem;
+  padding: 1rem;
+  width: 100%;
+}

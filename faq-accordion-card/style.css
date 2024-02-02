@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  width: 20rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 8rem; 
+  box-shadow: 0.5rem 0.5rem 0.5rem 1px hsl(0deg 0% 0% / 0.075);
+}
+
+.illustration {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+img {
+  margin-top: -8rem;
+  width: 16rem;
+  filter: drop-shadow(0 2rem 0 hsl(240, 5%, 91%));
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+details {
+  color: hsl(240, 6%, 50%);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary:hover {
+  cursor: pointer;
+  color: hsl(14, 88%, 65%);
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+details > summary::after {
+  content: url(images/icon-arrow-down.svg);
+  float: right;
+}
+
+details[open] > summary {
+  color: black;
+  font-weight: 700;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(240, 5%, 91%);
+  margin: 1em 0;
+  padding: 0;
+}
+
+p {
+  font-size: 13px;
+}
+
+.faq div {
+  height: 22rem;
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: 1000px;
+    width: 60%;
+    height: 28rem;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: auto;
+    position: relative;
+  }
+  main > div {
+    width: 50%;
+    overflow: hidden;
+  }
+  .faq {
+    margin-top: 2rem;
+  }
+  .faq div {
+    max-width: 20rem;
+    padding-right: 2rem;
+    min-width: 280px;
+  }
+  h1 {
+    text-align: left;
+  }
+  .illustration {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    content: url("images/illustration-woman-online-desktop.svg");
+    background: url("images/bg-pattern-desktop.svg") no-repeat;
+    background-size: 200%;
+    background-position: right 0rem bottom -7rem;
+    width: 25rem;
+    margin: auto;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    left: -4rem;
+    filter: none;
+  }
+  .illustration::after {
+    content: url("images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 40%;
+    left: -6rem;
+  }
+
+}

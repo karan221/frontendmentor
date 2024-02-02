@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive Card Details Form</title>
+</head>
+<body>
+
+  <div id="background"></div>
+
+  <main>
+    <div id="center-box">
+      <div class="bg-card">
+        <div class="back">
+          <img src="images/bg-card-back.png" alt="">
+          <span id="cvc"> 000 </span>
+        </div>
+      </div>
+      <div class="fg-card">
+        <div class="front">
+          <img src="images/bg-card-front.png" alt="">
+          <span id="disc"></span>
+          <span id="circle"></span>
+          <span id="number"> 0000 0000 0000 0000 </span>
+          <span id="name">JANE APPLESEED</span>
+          <span id="exp"> 00/00 </span>
+        </div>
+      </div>
+  
+      <div class="card-form">
+        <form onsubmit="thankYou(); return false;">
+          <fieldset>
+            <label for="card-holder"> CARDHOLDER NAME </label>
+            <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" autocomplete="cc-name">
+            <span id="card-holder-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+          </fieldset>
+          <fieldset>
+            <label for="card-number"> CARD NUMBER </label>
+            <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation" autocomplete="cc-number">
+            <span id="card-number-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+          </fieldset>
+          <div id="exp-cvv">
+            <fieldset id="mmyy">
+              <legend> EXP. DATE (MM/YY) </legend>
+              <fieldset>
+                <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation" autocomplete="cc-exp-month">
+                <span id="month-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+              <fieldset>
+                <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation" autocomplete="cc-exp-year">
+                <span id="year-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+            </fieldset>
+            <fieldset>
+              <legend> CVC </legend>
+              <fieldset>
+                <input id="card-cvc" type="text" inputmode="numeric" required placeholder="e.g. 123" aria-describedby="cvc-validation">
+                <span id="cvc-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+            </fieldset>
+          </div>
+          <button id="submit">Confirm</button>
+        </form>
+      </div>
+
+      <div id="thank-you">
+        <div><img src="images/icon-complete.svg" alt="completed"></div>
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="imask.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+* {
+  // border: 1px solid red;
+}
+
+::-webkit-input-placeholder {
+  text-transform: initial;
+}
+
+:-moz-placeholder { 
+  text-transform: initial;
+}
+
+::-moz-placeholder {  
+  text-transform: initial;
+}
+
+:-ms-input-placeholder { 
+  text-transform: initial;
+}
+
+$light-red: hsl(0, 100%, 63%);
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100svh;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#background {
+  background: url("images/bg-main-desktop.png");
+  background-size: 100% 100%;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 0;
+}
+
+input {
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  min-width: 70rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #center-box {
+    width: 60rem;
+    height: 28rem;
+    display: grid;
+    grid-template-areas:
+      "img1 form"
+      "img2 form";
+    grid-template-columns: 4fr 5fr;
+    column-gap: 8rem;
+    row-gap: 2rem;
+
+    .fg-card img, .bg-card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      max-height: 100%;
+    }    
+
+    .fg-card { grid-area: img1 }
+    .bg-card { grid-area: img2 }
+
+    .front, .back {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      color:white;
+    }
+
+    .front {
+      margin-left: -3rem;
+      span { position: absolute; }
+      #disc {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color:hsl(270, 3%, 87%);
+        left: 2rem;
+        top: 1rem;
+      }
+      #circle {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 1px solid hsl(270, 3%, 87%);
+        left: 5rem;
+        top: 1.5rem;
+      }
+      #number {
+        font-variant-numeric: tabular-nums;
+        font-size: 1.4rem;
+        bottom: 4rem;
+        left: 2rem;
+        letter-spacing: 3px;
+      }
+      #name, #exp {
+        font-size: 0.85rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      #name {
+        bottom: 2rem;
+        left: 2rem;
+      }
+      #exp {
+        bottom: 2rem;
+        right: 2rem;
+      }
+    }
+    .back {
+      margin-left: 3rem;
+      span {
+        font-size: 0.8rem;
+        position: absolute;
+        bottom: 6.2rem;
+        right: 3rem;
+      }
+    }
+
+    .card-form {
+      grid-area: form;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      width: 80%; 
+
+      label, legend {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color:hsl(278, 68%, 11%);
+      }
+
+      fieldset {
+        // margin-bottom: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      #card-holder {
+        text-transform: capitalize;
+      }
+
+      input {
+        margin-top: 0.3rem;
+        width: 100%;
+        border: hsl(270, 3%, 87%) 1.5px solid;
+        color:hsl(278, 68%, 11%);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem;
+        &:valid {
+          border-color: hsl(270, 3%, 87%);
+        }
+        &:focus {
+          outline: none;
+          border-color: hsl(278, 94%, 30%);
+        }
+        &::placeholder {
+          color: hsl(279, 6%, 55%);
+        }
+        &:user-invalid {
+          border-color: hsl(0, 100%, 50%);
+        }
+        &:user-invalid:required:placeholder-shown + span::before {
+          content: "Can't be blank";
+        }
+      }
+
+      .validation-message {
+        display: block;
+        padding-top: 0.4em;
+        color: $light-red;
+        font-size: 0.6rem;
+      }
+
+      fieldset {
+        border: 0;
+        padding: 0;
+      }
+      
+      #exp-cvv, #mmyy {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      border: grey 1px solid;
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.5rem;
+      background-color: hsl(278, 68%, 11%);
+      color: white;
+      cursor: pointer;
+    }
+
+    div#thank-you {
+      grid-area: form;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        background-size:contain;
+      }
+
+      button {
+        width: 70%;
+      }
+
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    height: 100svh;
+  }
+  #background {
+    background: url("images/bg-main-mobile.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 15rem;
+  }
+  #center-box .fg-card .front span#number {
+    font-size: 1rem;
+  }
+  main {
+    height: auto;
+    min-width: 20rem;
+    #center-box {
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 0;
+      .fg-card, .bg-card {
+        width: 80%;
+        min-width: 16.5rem;
+      }
+
+      .bg-card {
+        float: right;
+        margin: 1rem;
+      }
+
+      .fg-card {
+        position: absolute;
+        top: 7.5rem;
+        margin-left: 1rem;
+        z-index: 20;
+      }
+      .bg-card {
+        margin-left: auto;
+      }
+      .fg-card img, .bg-card img {
+        position: relative;
+      }
+      .back {
+        float: right;
+        span {
+          font-size: 1rem;
+          bottom: 4.7rem;
+          right: 2rem;
+        }
+        margin: 0;
+      }
+      .front {
+        margin: 0;
+      }
+      .card-form {
+        padding: 1rem;
+        margin-top: 6rem
+      }
+      form {
+        width: 100%;
+        min-width: 310px;
+      }
+      #thank-you {
+        margin: 1rem;
+        margin-top: 7rem;
+      }
+    }
+  }
+}

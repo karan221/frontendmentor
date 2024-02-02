@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, body, ul, ol, dl {
+  margin: 0;
+}
+
+html, body {
+  height: 100svh;
+  width: 100svw;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: hsl(225, 100%, 94%);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(images/pattern-background-desktop.svg) no-repeat top;
+}
+
+.container {
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__image {
+  background: url('images/illustration-hero.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: calc(440% / 9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.order__summary {
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+.card__content p {
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan__container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsla(225, 100%, 94%, 0.25);
+  width: 100%;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+}
+
+.plan__container a {
+  color: hsla(245, 75%, 52%, 0.9);
+  font-size: small;
+  font-weight: 900;
+}
+
+.plan {
+  display: flex;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.plan__type {
+  font-weight: 900;
+}
+
+.plan__price {
+  color: hsla(223, 47%, 23%, 0.5);
+  font-weight: 500;
+}
+
+.music__icon {
+  background: url('images/icon-music.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1000px hsla(223, 47%, 23%, 0.1);
+  margin-right: 1rem;
+}
+
+.card__content button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 25px 50px hsla(245, 75%, 52%, 0.25);
+}
+
+.cancel_order {
+  margin-top: 2rem;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+
+@media (min-width: 450px) {
+  .container {
+    width: 28rem;
+  }
+
+  .order__summary {
+    padding: 0 1.5rem;
+  }
+
+  .card__content {
+    margin: 3rem;
+  }
+
+  .plan__container {
+    padding: 1.5rem;
+  }
+}

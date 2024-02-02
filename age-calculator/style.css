@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  height: 100svh;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  flex-direction: column;
+  border-radius: 1.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-bottom-right-radius: 10rem;
+  width: 38rem;
+}
+main .separator {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+main .separator::before {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+main .separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+main .separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+main .separator a {
+  float: right;
+}
+main .separator img {
+  padding: 0.8rem;
+  border-radius: 50px;
+  background-color: hsl(259, 100%, 65%);
+}
+main .separator img:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+main form {
+  display: flex;
+}
+main form fieldset {
+  border: none;
+  margin: 0;
+}
+main form fieldset label {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+}
+main form fieldset:invalid label {
+  color: hsl(0, 100%, 67%);
+}
+main form fieldset:invalid input {
+  border-color: hsl(0, 100%, 67%);
+}
+main form input[type=number]::-webkit-outer-spin-button,
+main form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main form input[type=number] {
+  -moz-appearance: textfield;
+}
+main form input[type=number] {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 7rem;
+  padding: 0.6rem;
+  border: none;
+  border: solid 1px #ccc;
+  border-radius: 0.5rem;
+  caret-color: transparent;
+}
+main form input[type=number]:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+}
+main form span {
+  display: block;
+}
+main form input:invalid:required + span:after {
+  content: "This Field is Required";
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+  font-size: 0.7rem;
+}
+main p {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  font-style: italic;
+  line-height: 1;
+  margin: 0;
+}
+main p span {
+  color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 10px;
+  }
+  main {
+    width: 300px;
+    padding: 1rem;
+  }
+  main .separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+  }
+}/*# sourceMappingURL=style.css.map */

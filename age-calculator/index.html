@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Age calculator</title>
+  <script src="scripts/luxon.min.js"></script>
+  <script src="scripts/script.js"></script>
+</head>
+<body>
+  <main>
+    <form id="dob">
+      <fieldset>
+        <label for="day">DAY</label>
+        <input type="number" id="day" placeholder="DD" required>
+        <span></span>
+      </fieldset>
+      <fieldset>
+        <label for="day">MONTH</label>
+        <input type="number" id="month" placeholder="MM" required>
+        <span> &nbsp </span>
+      </fieldset>
+      <fieldset>
+        <label for="year">YEAR</label>
+        <input type="number" id="year" placeholder="YYYY" required>
+        <span></span>
+      </fieldset>
+    </form>
+    <div class="separator">
+      <a href="#" onclick="submitForm()">
+        <img src="assets/images/icon-arrow.svg" alt="">
+      </a>
+    </div>
+    <div>
+      <p><span class="years">--</span> years</p>
+      <p><span class="months">--</span> months</p>
+      <p><span class="days">--</span> days</p>
+    </div>
+  </main>
+</body>
+</html>
